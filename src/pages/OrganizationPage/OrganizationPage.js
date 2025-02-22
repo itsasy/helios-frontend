@@ -22,13 +22,24 @@ const OrganizationPage = () => {
 
     // Función para filtrar los datos
     const filteredDepartments = departments.filter((department) => {
-        // Filtrado por término de búsqueda
         if (searchText) {
-            const matchesSearch = selectedColumns.some((col) => {
-                const column = columns.find((c) => c.dataIndex === col);
-                return column && String(department[column.dataIndex]).toLowerCase().includes(searchText.toLowerCase());
-            });
-            if (!matchesSearch) return false;
+            const searchTextLower = searchText.toLowerCase();
+
+            if (selectedColumns.length === 0) {
+                const matchesSearch = columns.some((col) => {
+                    const value = department[col.dataIndex];
+                    return value && String(value).toLowerCase().includes(searchTextLower);
+                });
+                if (!matchesSearch) return false;
+            }
+            else {
+                const matchesSearch = selectedColumns.some((col) => {
+                    const column = columns.find((c) => c.dataIndex === col);
+                    const value = department[column.dataIndex];
+                    return column && value && String(value).toLowerCase().includes(searchTextLower);
+                });
+                if (!matchesSearch) return false;
+            }
         }
 
         // Filtrado por columnas (División y División Superior)
@@ -43,8 +54,6 @@ const OrganizationPage = () => {
         return true;
     });
 
-
-    // Menú para seleccionar columnas de búsqueda
     const searchColumnMenu = (
         <Menu>
             {visibleColumns.map((col) => (
