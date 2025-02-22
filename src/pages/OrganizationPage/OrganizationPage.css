@@ -1,0 +1,106 @@
+.organization-layout {
+  background-color: #f0f2f5;
+}
+
+.content {
+  padding: 24px;
+  background-color: white;
+  margin: 24px;
+  border-radius: 8px;
+}
+
+.management-section {
+  margin-bottom: 16px;
+}
+
+.view-options {
+  margin-bottom: 16px;
+}
+
+.view-buttons .ant-btn {
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  color: #666;
+  font-weight: 500;
+  box-shadow: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.view-buttons .ant-btn-primary {
+  border-color: #1890ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #1890ff;
+}
+
+.view-buttons .ant-btn-default:hover {
+  border-color: #1890ff;
+  color: #1890ff;
+}
+
+.search-section {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+
+/* Buttons */
+.right-options {
+  display: flex;
+  gap: 8px;
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background-color: white;
+  color: #666;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.custom-button.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  color: white;
+}
+
+.custom-button.ant-btn-text {
+  border: 1px solid #d9d9d9;
+  background-color: white;
+  color: #666;
+}
+
+.custom-button.ant-btn-text:hover {
+  border-color: #1890ff;
+  color: #1890ff;
+}
+
+.custom-button .anticon {
+  font-size: 16px;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-section .ant-select {
+  min-width: 280px; 
+  padding: 4px;
+}
+
+.search-section .ant-input {
+  flex: 1; 
+}
+
+.ant-select-arrow {
+  pointer-events: auto !important;
+}

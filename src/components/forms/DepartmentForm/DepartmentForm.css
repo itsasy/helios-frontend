@@ -1,0 +1,11 @@
+.department-form .ant-form-item-label {
+    font-weight: bold;
+}
+
+.department-form .ant-input {
+    border-radius: var(--border-radius);
+}
+
+.department-form .ant-select-selector {
+    border-radius: var(--border-radius);
+}
